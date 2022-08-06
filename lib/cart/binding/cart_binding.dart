@@ -6,6 +6,6 @@ import '../controller/cart_controller.dart';
 class CartBinding extends Bindings {
   @override
   void dependencies() {
-    Get.put<CartController>(CartController());
+    Get.lazyPut<CartController>(()=>CartController());
   }
 }

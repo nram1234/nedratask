@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 
+import '../prodectDetails/widgets/circle_button.dart';
 import '../utils/app_colors.dart';
 import '../utils/styles.dart';
 import 'controller/home_controller.dart';
@@ -136,7 +137,17 @@ class TapScreen1 extends GetView<HomeController> {
                       fit: BoxFit.fill),
                   borderRadius: BorderRadius.circular(20)),
 
-            ),
+         child: Column(
+           children: [
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Row(mainAxisAlignment: MainAxisAlignment.end,children: [ CircleButton(
+                 iconColor: redColor,
+                 iconData: Icons.favorite,
+               )]),
+             ),
+           ],
+         ),   ),
             Text("Warm Zipper", style: bigTitleBlackTextStylewithoutBold),
 
             Text(
