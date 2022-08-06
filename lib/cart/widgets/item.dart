@@ -51,14 +51,22 @@ int pos;
           Spacer(
             flex: 2,
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 8.0, left: 8),
-            child: Icon(Icons.remove, color: Colors.black.withOpacity(.5)),
+          GestureDetector(onTap: (){
+         Get.find<CartController>().decitemcard(pos: pos);
+          },
+            child: Padding(
+              padding: const EdgeInsets.only(right: 8.0, left: 8),
+              child: Icon(Icons.remove, color: Colors.black.withOpacity(.5)),
+            ),
           ),
-          Text("55", style: bigTitleBlackTextStyle),
-          Padding(
-            padding: const EdgeInsets.only(right: 8.0, left: 8),
-            child: Icon(Icons.add, color: accentColor),
+          Text(itemcard.count.toString(), style: bigTitleBlackTextStyle),
+          GestureDetector(onTap: (){
+            Get.find<CartController>().incitemcard(pos: pos );
+          },
+            child: Padding(
+              padding: const EdgeInsets.only(right: 8.0, left: 8),
+              child: Icon(Icons.add, color: accentColor),
+            ),
           )
         ],
       ),

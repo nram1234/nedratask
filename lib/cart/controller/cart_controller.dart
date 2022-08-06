@@ -20,4 +20,15 @@ chitemcard({required int pos,required bool val}){
   cart[pos].ch=val;
   update();
 }
+
+
+incitemcard({required int pos }){
+  cart[pos].count++;
+
+  update();
+}
+decitemcard({required int pos }){
+  cart[pos].count--;
+  update();
+}
 }
